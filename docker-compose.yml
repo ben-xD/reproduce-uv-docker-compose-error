@@ -1,0 +1,9 @@
+services:
+  reproduce:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: "tail -f /dev/null"
+    volumes:
+      - ./:/app
+      - /app/.venv
